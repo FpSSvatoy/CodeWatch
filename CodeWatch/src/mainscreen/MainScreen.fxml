@@ -9,21 +9,41 @@
 
 <AnchorPane fx:id="mainScreenWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainscreen.MainScreenController">
    <children>
-      <TreeView fx:id="navigationPanel" layoutY="30.0" prefHeight="570.0" prefWidth="574.0" style="-fx-background-color: #63a512;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="30.0" />
-      <TextArea fx:id="textCode" layoutX="572.0" prefHeight="600.0" prefWidth="56.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="572.0" AnchorPane.rightAnchor="172.0" AnchorPane.topAnchor="0.0" />
-      <ListView fx:id="commentsQueueList" layoutX="623.0" prefHeight="504.0" prefWidth="172.0" AnchorPane.bottomAnchor="96.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <Button fx:id="copyButton" layoutX="623.0" layoutY="504.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="172.0" text="Копировать" AnchorPane.bottomAnchor="64.0" AnchorPane.rightAnchor="0.0" />
-      <Button fx:id="editButton" layoutX="623.0" layoutY="536.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="172.0" text="Редактировать" AnchorPane.bottomAnchor="32.0" AnchorPane.rightAnchor="0.0" />
-      <Button fx:id="deleteButton" layoutX="623.0" layoutY="568.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="172.0" text="Удалить" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <MenuButton fx:id="menuButton" alignment="TOP_CENTER" layoutY="-2.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="204.0" text="Проект" textFill="#446990" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="-2.0">
-        <items>
-          <MenuItem fx:id="menuLoadButton" mnemonicParsing="false" onAction="#loadProject" text="Загрузить" />
-          <MenuItem fx:id="editorLaunchButton" mnemonicParsing="false" text="Открыть редактор по умолчанию" />
-            <MenuItem fx:id="menuSettingButton" mnemonicParsing="false" text="Настройки" />
-        </items>
-         <font>
-            <Font size="14.0" />
-         </font>
-      </MenuButton>
+      <TextArea fx:id="textCode" editable="false" layoutX="-1.0" prefHeight="600.0" prefWidth="595.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="206.0" AnchorPane.topAnchor="0.0" />
+      <TabPane layoutX="594.0" prefHeight="600.0" prefWidth="207.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="       Проект       ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <MenuButton fx:id="menuButton" alignment="TOP_CENTER" mnemonicParsing="false" prefHeight="32.0" prefWidth="207.0" text="     Проект" textFill="#446990" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <MenuItem fx:id="menuLoadButton" mnemonicParsing="false" onAction="#loadProject" text="Загрузить" />
+                            <MenuItem fx:id="editorLaunchButton" mnemonicParsing="false" text="Открыть редактор по умолчанию" />
+                              <MenuItem fx:id="menuSettingButton" mnemonicParsing="false" text="Настройки" />
+                          </items>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </MenuButton>
+                        <TreeView fx:id="navigationPanel" layoutX="-3.0" layoutY="32.0" prefHeight="539.0" prefWidth="207.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text=" Комментарии">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="commentsQueueList" layoutY="-4.0" prefHeight="479.0" prefWidth="207.0" AnchorPane.bottomAnchor="96.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-4.0" />
+                        <Button fx:id="copyButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="207.0" text="Копировать" AnchorPane.bottomAnchor="64.0" AnchorPane.rightAnchor="0.0" />
+                        <Button fx:id="editButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="207.0" text="Редактировать" AnchorPane.bottomAnchor="32.0" AnchorPane.rightAnchor="0.0" />
+                        <Button fx:id="deleteButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="207.0" text="Удалить" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
    </children>
 </AnchorPane>

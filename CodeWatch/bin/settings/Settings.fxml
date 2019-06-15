@@ -6,45 +6,26 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane fx:id="settingsWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="425.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="settings.SettingsController">
+<AnchorPane fx:id="settingsWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="176.0" prefWidth="425.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="settings.SettingsController">
    <children>
       <Label layoutX="166.0" text="Настройки">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <Separator layoutY="30.0" prefHeight="0.0" prefWidth="425.0" AnchorPane.bottomAnchor="450.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0" />
-      <Label layoutX="178.0" layoutY="36.0" text="Кодировка">
+      <Label layoutX="107.0" layoutY="34.0" text="Выбор редактора по умолчанию">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Separator layoutX="9.0" layoutY="41.0" prefHeight="0.0" prefWidth="425.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0" />
-      <CheckBox fx:id="utf8CheckBox" layoutX="14.0" layoutY="91.0" mnemonicParsing="false" text="Utf 8" />
-      <CheckBox fx:id="windows1251CheckBox" layoutX="14.0" layoutY="130.0" mnemonicParsing="false" text="Windows-1251" />
-      <Separator layoutX="3.0" layoutY="145.0" prefHeight="0.0" prefWidth="425.0" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="180.0" />
-      <Label layoutX="142.0" layoutY="185.0" text="Подсветка синтаксиса">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Separator layoutX="13.0" layoutY="156.0" prefHeight="0.0" prefWidth="425.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="210.0" />
-      <CheckBox fx:id="javaCheckBox" layoutX="14.0" layoutY="240.0" mnemonicParsing="false" text="Java" />
-      <CheckBox fx:id="htmlCheckBox" layoutX="14.0" layoutY="279.0" mnemonicParsing="false" text="HTML" />
-      <Separator layoutX="13.0" layoutY="155.0" prefHeight="0.0" prefWidth="425.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="330.0" />
-      <Label layoutX="107.0" layoutY="336.0" text="Выбор редактора по умолчанию">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Separator layoutX="23.0" layoutY="165.0" prefHeight="0.0" prefWidth="425.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="360.0" />
-      <Label layoutX="14.0" layoutY="370.0" text="Введите путь к исполняему файлу редактора" />
-      <TextField fx:id="pathField" layoutX="14.0" layoutY="395.0" prefHeight="28.0" prefWidth="405.0" promptText="Введите путь" />
-      <Button fx:id="settingsClose" layoutX="142.0" layoutY="432.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="150.0" text="Закрыть">
+      <Separator layoutY="58.0" prefHeight="0.0" prefWidth="425.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="58.0" />
+      <Label layoutX="14.0" layoutY="68.0" text="Введите путь к исполняему файлу редактора" />
+      <TextField fx:id="pathField" layoutX="14.0" layoutY="93.0" prefHeight="28.0" prefWidth="405.0" promptText="Введите путь" />
+      <Button fx:id="settingsClose" layoutX="142.0" layoutY="130.0" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="34.0" prefWidth="150.0" text="Закрыть">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
+      <Separator layoutY="29.0" prefHeight="0.0" prefWidth="425.0" />
    </children>
 </AnchorPane>
